@@ -7,10 +7,10 @@ import pickle
 app = Flask(__name__)
 
 # Load doctor data
-doctors_df = pd.read_csv('data/doctors.csv')
+doctors_df = pd.read_csv('/DiseaseAndSymptoms.csv')
 
 # Load the trained model
-with open('models/doctor_recommendation_model.pkl', 'rb') as f:
+with open('train.py', 'rb') as f:
     model = pickle.load(f)
 
 # Route for home page
