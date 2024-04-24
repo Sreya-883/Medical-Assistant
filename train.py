@@ -5,7 +5,7 @@ import pickle
 
 def preprocess_dataset(file_path):
     # Load the disease and symptoms dataset
-    df = pd.read_csv(file_path)
+    df = pd.read_csv('/DiseaseAndSymptoms.csv')
 
     # Data cleaning and preprocessing
     df = df[['Disease', 'Symptom']]
@@ -38,8 +38,8 @@ def save_model(model, file_path):
 
 def main():
     # Specify file paths
-    dataset_path = 'data/disease_symptom.csv'
-    model_path = 'models/doctor_recommendation_model.pkl'
+    dataset_path = 'DiseaseAndSymptoms.csv'
+    model_path = 'train.py'
 
     # Preprocess dataset
     df = preprocess_dataset(dataset_path)
