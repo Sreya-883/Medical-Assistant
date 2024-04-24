@@ -9,19 +9,6 @@ MediConnect is a healthcare recommendation system developed for the Girl Hackath
 - **Machine Learning Model**: The system employs a machine learning model trained on historical symptom-doctor relationships to make accurate recommendations.
 - **User-Friendly Interface**: MediConnect provides a simple and intuitive web interface for symptom input and doctor recommendations.
 
-## Directory Structure
-
-```plaintext
-mediconnect/
-├── app.py
-├── data/
-│   ├── symptoms.csv
-│   └── doctors.csv
-├── models/
-│   └── doctor_recommendation_model.pkl
-└── templates/
-    └── index.html
-```
 ## Setup
 
 ### Clone the Repository
