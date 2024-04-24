@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediConnect - Healthcare Recommendation System</title>
+</head>
+<body>
+    <h1>Welcome to MediConnect</h1>
+    <p>Enter your symptoms below:</p>
+    <form action="/recommend" method="post">
+        <input type="text" name="symptoms" placeholder="Enter symptoms..." required>
+        <button type="submit">Recommend Doctors</button>
+    </form>
+    
+    {% if symptoms %}
+        <h2>Input Symptoms: {{ symptoms }}</h2>
+        {% if recommended_doctors %}
+            <h3>Recommended Doctors:</h3>
+            <ul>
+                {% for doctor in recommended_doctors %}
+                    <li>{{ doctor }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No doctors found based on the entered symptoms.</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
